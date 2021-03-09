@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
     <title>My Portfolio</title>
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
 
     <!-- Fonts -->
@@ -40,16 +40,19 @@
 				<!-- portfolio items -->
 				<section class="intro" id="home">
           <h1 class="section__title section__title--intro">
-              The title <strong>of my project</strong>
+              Muay  Thai <strong>Thoughts</strong>
           </h1>
-          <p class="section__subtitle section__subtitle--intro">short description</p>
-          <img class="intro__img" src="images/projectDemo.jpg" alt="custom program written by Weil Solutions">
+          <p class="section__subtitle section__subtitle--intro">an open blog for all things Muay Thai and striking related</p>
+          <img class="intro__img" src="images/projectDemo.jpg" alt="coding laptop stock image">
       	</section>
 				<div class="portfolio-item-individual">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <img class="portfolio-item__display" src="images/mtBlog.png" alt="">
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					
+					<p>Muay Thai Thoughts was created to provide an open blogspace to share anything and everything related to Muay Thai. This project combines two of my greatest passions, coding and Muay Thai and it served as a creative outlet for me to be able to both create something through code, and to share my experience and understanding of Muay Thai.</p>
+          <iframe src="https://giphy.com/embed/KkR5XlERqGNmgoAhQZ" width="480" height="264" frameBorder="0" class="portfolio-item__display" allowFullScreen></iframe>
+          <p>Muay Thai Thoughts was created primarily using React, with React Router for page routing and React Hooks to handle stateful logic and dynamic user interactions for certain components. React Modal was used to display the full article at the top level of the screen upon opening the article from its display preview. All articles are stored in a NoSQL database that is fetched from the front end using an axios get request managed by the useEffect hook and a designated RESTful API from the server.</p>
+          <iframe src="https://giphy.com/embed/4GtRDBoZVvJweZdo1k" width="480" height="264" frameBorder="0" class="portfolio-item__display" allowFullScreen></iframe>
+          <p>Styling was implemented with traditional CSS style sheets in addition to using Material UI components. The intention was to develop a site with a unified look and feel where the design stays consistent throughout the different pages and components.</p>
+          <p>Some technical challenges was trying to implement pagination for the articles and connecting the pages with fetching the articles from the database. The approach that was ultimately implemented required combining the usage of an event handler function, React Hooks, and a seperate pagination component to move through the the seperate pages depending on the amount of articles that were present in the database.</p>
+          <iframe src="https://giphy.com/embed/3anASr6LBSisy5Ftsv" width="480" height="264" frameBorder="0" class="portfolio-item__display" allowFullScreen>
 				</div>
 
         <footer class="footer">
