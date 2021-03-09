@@ -289,10 +289,10 @@ header {
 /* What I Do section */
 .my-services {
   background-color: var(--clr-dark);
-  background-image: url(../images/workplace.jpg);
-  background-size: cover;
+  /* background-image: url(../images/workplace.jpg); */
+  /* background-size: cover;
   background-position: center;
-  background-blend-mode: multiply;
+  background-blend-mode: multiply; */
   color: var(--clr-light);
   text-align: center;
 }
@@ -372,6 +372,10 @@ header {
 /* My Work Section */
 .my-work {
   background: var(--clr-dark);
+  background-image: url(../images/workplace.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
   color: var(--clr-light);
   text-align: center;
 }
@@ -419,7 +423,7 @@ header {
   background: #111;
   color: var(--clr-accent);
   text-align: center;
-  padding: 2.5em 0;
+  padding: 1.5em 0;
   font-size: var(--fs-h3);
 }
 
@@ -442,7 +446,7 @@ header {
   list-style-type: none;
   display: flex;
   justify-content: center;
-  margin: 2em 0 0;
+  margin: 1.5em 0 0;
   padding: 0;
 }
 
@@ -461,7 +465,8 @@ header {
   margin: 0 auto;
 }
 
-.portfolio-item-individual {
+.copywrite {
+  margin-top: 2em;
 }
 
 /* general media queries  */
