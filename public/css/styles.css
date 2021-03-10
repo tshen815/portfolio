@@ -42,7 +42,7 @@ body {
 }
 
 section {
-  padding: 5em 2em;
+  padding: 4em 2em;
 }
 
 img {
@@ -74,7 +74,7 @@ strong {
   color: var(--clr-dark);
   text-decoration: none;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   font-weight: var(--fw-bold);
@@ -82,7 +82,7 @@ strong {
 }
 
 .btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 /* typography */
@@ -255,6 +255,7 @@ header {
 
 .intro__img {
   box-shadow: var(--bs);
+  cursor: pointer;
 }
 
 .section__subtitle--intro {
@@ -313,6 +314,7 @@ header {
   background: var(--clr-light);
   opacity: 0.25;
 }
+
 .services {
   margin-bottom: 3em;
 }
@@ -321,6 +323,44 @@ header {
   margin: 0 auto;
 }
 
+.skills__flex-container {
+  height: 50vh;
+  margin: 2em;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+  grid-template-rows: 0.5fr 0.5fr;
+}
+.skills__icon-container {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.fa-js {
+  color: #f0db4f;
+}
+.fa-html5 {
+  color: #ffa500;
+}
+.fa-css3-alt {
+  color: #2965f1;
+}
+.fa-react {
+  color: #61dbfb;
+}
+.fa-node-js {
+  color: #6cc24a;
+}
+.fa-git-alt {
+  color: #f34f29;
+}
+.fa-bootstrap {
+  color: #563d7c;
+}
+.fa-npm {
+  color: #cc3534;
+}
 @media (min-width: 800px) {
   .services {
     display: flex;
@@ -467,6 +507,73 @@ header {
 
 .copywrite {
   margin-top: 2em;
+  /* display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  justify-content: center; */
+  display: flex;
+  justify-content: center;
+}
+
+.copywrite__name {
+  text-transform: uppercase;
+}
+.copywrite__date {
+  color: var(--clr-light);
+  padding-left: 4px;
+}
+
+.hidden-leaf {
+  width: 55px;
+  height: auto;
+  position: relative;
+  bottom: 1px;
+  right: 4px;
+  cursor: pointer;
+}
+
+/* Naruto Run Animation */
+.naruto {
+  position: fixed;
+  top: 262px;
+  left: 0;
+  margin-left: -410px;
+  z-index: 1;
+}
+
+.sasuke {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: -410px;
+  z-index: 1;
+}
+
+.run {
+  animation: naruto_run 5s ease 0s 1 normal none running;
+}
+@-webkit-keyframes naruto_run {
+  0% {
+    -webkit-transform: translate(0vw);
+  }
+  100% {
+    -webkit-transform: translate(150vw);
+  }
+}
+@-moz-keyframes naruto_run {
+  0% {
+    -webkit-transform: translate(0vw);
+  }
+  100% {
+    -webkit-transform: translate(150vw);
+  }
+}
+@-o-keyframes naruto_run {
+  0% {
+    -webkit-transform: translate(0vw);
+  }
+  100% {
+    -webkit-transform: translate(150vw);
+  }
 }
 
 /* general media queries  */
