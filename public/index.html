@@ -17,6 +17,7 @@
 
   </head>
   <body>
+    <!-- Have fun looking around! Huge shout out to Tony Batts for the inspiration! -->
     <!-- <div id="root"></div> -->
       <header>
           <div class="logo">
@@ -30,7 +31,8 @@
                   <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
                   <li class="nav__item"><a href="#services" class="nav__link">Skills</a></li>
                   <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                  <li class="nav__item"><a href="#work" class="nav__link">My Projects</a></li>
+                  <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+                  <li class="nav__item"><a href="https://app.luminpdf.com/viewer/60108aace582f200127115ac" class="nav__link">Resume</a></li>
               </ul>
           </nav>
       </header>
@@ -47,22 +49,40 @@
       <!-- My services -->
       <section class="my-services" id="services">
           <h2 class="section__title section__title--services">Skills</h2>
-          <div class="services">
-              <div class="service">
-                  <h3>Frontend Development</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div> <!-- / service -->
-              
-              <div class="service">
-                  <h3>Fullstack Development</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div> <!-- / service -->
-              
-              <div class="service">
-                  <h3>UX Design</h3>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              </div> <!-- / service -->
-          </div> <!-- / services -->
+          <div class="skills__flex-container">
+              <div class="skills__icon-container javascript">
+                  <i class="fab fa-js fa-3x"></i>
+                  <h3>Javascript</h3>
+              </div>
+              <div class="skills__icon-container">
+                  <i class="fab fa-html5 fa-3x"></i>
+                  <h3>HTML</h3>
+              </div>
+              <div class="skills__icon-container">
+                  <i class="fab fa-css3-alt fa-3x"></i>   
+                  <h3>CSS</h3>             
+              </div>
+              <div class="skills__icon-container">
+                  <i class="fab fa-react fa-3x"></i>  
+                  <h3>React</h3>              
+              </div>
+              <div class="skills__icon-container">
+                  <i class="fab fa-node-js fa-3x"></i>
+                  <h3>Node.js</h3>
+              </div>
+              <div class="skills__icon-container">
+                <i class="fab fa-git-alt fa-3x"></i>
+                  <h3>Git</h3>
+              </div>
+              <div class="skills__icon-container">
+                <i class="fab fa-bootstrap fa-3x"></i>   
+                  <h3>Bootstrap</h3>             
+              </div>
+              <div class="skills__icon-container">
+                <i class="fab fa-npm fa-3x"></i>  
+                  <h3>npm</h3>              
+              </div>
+            </div>
           
           <a href="#work" class="btn">Projects</a>
       </section>
@@ -107,7 +127,7 @@
               </a>
             </div>
       </section>
-      
+      <!-- <img class="naruto run" src="images/naruto.gif" data-src="images/naruto.gif" data-srcset="images/naruto.gif" alt="naruto running"> -->
       <!-- Footer -->
       <footer class="footer">
           <a href="mailto:tshen815@live.com" class="footer__link">tshen815@live.com</a>
@@ -128,7 +148,15 @@
                 </a>
               </li>
           </ul>
-          <p class="copywrite"><small>Tony Shen © 2021</small></p>
+          <p class="copywrite">
+              <span class="copywrite__name">
+                <small>Tony Shen</small>
+              </span>
+              <span class="copywrite__date">
+                <small>© 2021</small>
+              </span>
+              <img class="hidden-leaf" src="images/konoha.png" alt="naruto hidden leaf symbol">
+          </p>
       </footer>
       <script src="index.js"></script>
   </body>
