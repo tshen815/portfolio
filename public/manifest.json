@@ -1,7 +1,7 @@
 {
-  "short_name": "Portfolio",
-  "name": "My Web Portfolio",
-  "start_url": ".",
+  "short_name": "devShen",
+  "name": "tony shen web portfolio",
+  "start_url": "tonyshen.io",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
