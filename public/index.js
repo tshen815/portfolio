@@ -2,7 +2,7 @@
 const toggleNav = document.querySelector('.nav-toggle');
 const navLinks = document.querySelectorAll('.nav__link');
 const narutoRun = () => {
-    document.querySelector('.intro__img').addEventListener("click", () => {
+    document.querySelector('.naruto__event').addEventListener("click", () => {
         const naruto = document.createElement("img");
         naruto.classList.add("naruto", "run");
         naruto.src="images/naruto.gif";
