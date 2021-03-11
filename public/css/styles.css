@@ -208,6 +208,11 @@ header {
     transform: translateX(60%);
   }
 }
+@media (max-width: 420px) {
+  .nav-open .nav {
+    transform: translateX(45%);
+  }
+}
 
 .nav-open .nav-toggle {
   position: fixed;
@@ -336,6 +341,13 @@ header {
 @media (max-width: 610px) {
   .skills__flex-container {
     height: 75vh;
+    grid-template-columns: auto auto;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+  }
+}
+@media (max-width: 380px) {
+  .skills__flex-container {
+    height: 90vh;
     grid-template-columns: auto auto;
     grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
   }
@@ -588,6 +600,11 @@ header {
 @media (max-width: 850px) {
   .run {
     animation: naruto_run 2s ease 0s 1 normal none running;
+  }
+}
+@media (max-width: 550px) {
+  .run {
+    animation: naruto_run 1s ease 0s 1 normal none running;
   }
 }
 
