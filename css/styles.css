@@ -1,0 +1,619 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set custom css properties */
+
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #f8f8f8;
+  --clr-dark: #303030;
+  --clr-accent: #4cb5f5;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  /* layering drop shadow */
+  --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
+    0.125em 0.125em 0.5em rgba(0, 0, 0, 0.15);
+}
+
+/* General styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  margin: 0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+}
+
+section {
+  padding: 4em 2em;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.portfolio-item__display {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+:focus {
+  outline: 3px solid var(--clr-accent);
+  /* outline: none; */
+  outline-offset: 3px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 2em;
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
+
+/* typography */
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--fs-h1);
+}
+h2 {
+  font-size: var(--fs-h2);
+}
+h3 {
+  font-size: var(--fs-h3);
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+.section__title {
+  margin-bottom: 0.25em;
+}
+
+.section__title--intro {
+  font-weight: var(--fw-reg);
+}
+.section__title--intro strong {
+  display: block;
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+  background: var(--clr-accent);
+  font-family: var(--ff-secondary);
+  margin-bottom: 1em;
+  padding: 0.25em 1em;
+}
+
+/* Header */
+
+.logo {
+  max-width: 200px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.nav {
+  position: fixed;
+  background: var(--clr-accent);
+  opacity: 0.9;
+  color: var(--clr-light);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  transform: translateX(100%);
+  transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.nav__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  height: 100%;
+  margin: 0;
+  padding-left: 50px;
+}
+
+.nav__link {
+  color: inherit;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  text-decoration: none;
+}
+
+.nav__link:hover {
+  /* color: var(--clr-accent); */
+  opacity: 0.65;
+  /* text-decoration: underline; */
+}
+
+/* hamburger dropdown in header */
+.nav-toggle {
+  padding: 0.5em;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  z-index: 1000;
+}
+
+.nav-toggle:focus {
+  outline: none;
+}
+
+/* bring over the nav menu */
+.nav-open .nav {
+  transform: translateX(70%);
+}
+
+@media (max-width: 660px) {
+  .nav-open .nav {
+    transform: translateX(60%);
+  }
+}
+@media (max-width: 420px) {
+  .nav-open .nav {
+    transform: translateX(45%);
+  }
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(45deg);
+}
+
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  background: var(--clr-dark);
+  width: 2em;
+  height: 3px;
+  border-radius: 1em;
+  transition: transform 350ms ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hamburger::before {
+  top: 6px;
+}
+.hamburger::after {
+  bottom: 6px;
+}
+
+/* Intro section */
+.intro {
+  position: relative;
+}
+
+.intro__img {
+  box-shadow: var(--bs);
+  cursor: pointer;
+}
+
+.section__subtitle--intro {
+  display: inline-block;
+}
+
+@media (min-width: 600px) {
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-column-gap: 1em;
+    grid-template-areas: "img title" "img subtitle";
+    grid-template-columns: min-content max-content;
+  }
+  .intro__img {
+    grid-area: img;
+    min-width: 250px;
+    position: relative;
+  }
+  .section__subtitle--intro {
+    align-self: start;
+    grid-column: -1/1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+  }
+}
+
+/* What I Do section */
+.my-services {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.section__title--services {
+  color: var(--clr-accent);
+  position: relative;
+}
+
+/* styling for pseudo elm line in What I Do section */
+.section__title--services::after {
+  /* pseudo elements always need a content or they wont appear! */
+  content: "";
+  display: block;
+  width: 2.5em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  background: var(--clr-light);
+  opacity: 0.25;
+}
+
+.services {
+  margin-bottom: 3em;
+}
+.service {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.skills__flex-container {
+  height: 50vh;
+  margin: 2em;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  flex-wrap: wrap;
+  grid-template-rows: 0.5fr 0.5fr;
+}
+@media (max-width: 610px) {
+  .skills__flex-container {
+    height: 75vh;
+    grid-template-columns: auto auto;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+  }
+}
+@media (max-width: 380px) {
+  .skills__flex-container {
+    height: 90vh;
+    grid-template-columns: auto auto;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+  }
+}
+
+.skills__icon-container {
+  font-size: 2rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.fa-js {
+  color: #f0db4f;
+}
+.fa-html5 {
+  color: #ffa500;
+}
+.fa-css3-alt {
+  color: #2965f1;
+}
+.fa-react {
+  color: #61dbfb;
+}
+.fa-node-js {
+  color: #6cc24a;
+}
+.fa-git-alt {
+  color: #f34f29;
+}
+.fa-bootstrap {
+  color: #563d7c;
+}
+.fa-npm {
+  color: #cc3534;
+}
+@media (min-width: 800px) {
+  .services {
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .service + .service {
+    margin-left: 2em;
+  }
+}
+
+/* Who I am Section */
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-me__img {
+  box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    grid-template-areas: "title img" "subtitle img" "text img";
+    grid-column-gap: 2em;
+  }
+  .section__title--about {
+    grid-area: title;
+  }
+  .section__subtitle--about {
+    grid-column: 1/-1;
+    grid-row: 2;
+    position: relative;
+    left: -1em;
+    width: calc(100% + 2em);
+    padding-left: 2em;
+    padding-right: calc(200px + 5em);
+  }
+  .about-me__img {
+    grid-area: img;
+    position: relative;
+    z-index: 2;
+  }
+}
+
+/* My Work Section */
+.my-work {
+  background: var(--clr-dark);
+  background-image: url(../images/workplace.jpg);
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: multiply;
+  color: var(--clr-light);
+  text-align: center;
+}
+
+.section__subtitle--work {
+  color: var(--clr-accent);
+  font-weight: var(--fw-bold);
+  margin-bottom: 2em;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 4px;
+  /* max-width: 1100px;
+  margin: 0 auto; */
+}
+
+.portfolio__item {
+  background: var(--clr-accent);
+  overflow: hidden;
+}
+
+.portfolio__img {
+  transition: transform 650ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  float: left;
+}
+
+.portfolio__item:focus {
+  position: relative;
+  z-index: 2;
+}
+
+.portfolio__img:hover,
+.portfolio__item:focus .portfolio__img {
+  transform: scale(1.2);
+  opacity: 0.5;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  color: var(--clr-accent);
+  text-align: center;
+  padding: 1.5em 0;
+  font-size: var(--fs-h3);
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__link {
+  font-weight: var(--fw-bold);
+}
+
+.footer__link:hover,
+.social-list__link:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+.social-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 1.5em 0 0;
+  padding: 0;
+}
+
+.social-list__item {
+  margin: 0 0.5em;
+}
+
+.social-list__link {
+  padding: 0.5em;
+}
+
+/* Portfolio Item  */
+.portfolio-item-individual {
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.copywrite {
+  margin-top: 2em;
+  /* display: grid;
+  grid-template-columns: 0.5fr 0.5fr 0.5fr;
+  justify-content: center; */
+  display: flex;
+  justify-content: center;
+}
+
+.copywrite__name {
+  text-transform: uppercase;
+}
+.copywrite__date {
+  color: var(--clr-light);
+  padding-left: 4px;
+}
+
+.hidden-leaf {
+  width: 52px;
+  height: auto;
+  position: relative;
+  right: 4px;
+  cursor: pointer;
+}
+
+/* Naruto Run Animation */
+.naruto {
+  position: fixed;
+  top: 262px;
+  left: 0;
+  margin-left: -410px;
+  z-index: 1;
+}
+
+.sasuke {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: -410px;
+  z-index: 1;
+}
+
+.run {
+  animation: naruto_run 5s ease 0s 1 normal none running;
+}
+@-webkit-keyframes naruto_run {
+  0% {
+    -webkit-transform: translate(0vw);
+  }
+  100% {
+    -webkit-transform: translate(150vw);
+  }
+}
+@-moz-keyframes naruto_run {
+  0% {
+    -webkit-transform: translate(0vw);
+  }
+  100% {
+    -webkit-transform: translate(150vw);
+  }
+}
+@-o-keyframes naruto_run {
+  0% {
+    -webkit-transform: translate(0vw);
+  }
+  100% {
+    -webkit-transform: translate(150vw);
+  }
+}
+
+@media (max-width: 850px) {
+  .run {
+    animation: naruto_run 2s ease 0s 1 normal none running;
+  }
+}
+@media (max-width: 550px) {
+  .run {
+    animation: naruto_run 1s ease 0s 1 normal none running;
+  }
+}
+
+/* general media queries  */
+@media (min-width: 800px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}

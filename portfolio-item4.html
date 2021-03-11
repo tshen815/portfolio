@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000" />
+    <title>To-do List</title>
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />  
+
+    <!-- CSS styles for site -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+
+  </head>
+	<body>
+
+      <header>
+          <div class="logo">
+						<a href="index.html" class="logo-btn">
+							<img src="images/logo.png" alt="logo displaying devShen">
+						</a>
+          </div>
+          <button class="nav-toggle" aria-label="toggle navigation">
+          	<span class="hamburger"></span>
+          </button>
+            <nav class="nav">
+             	<ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="index.html#services" class="nav__link">My Services</a></li>
+                <li class="nav__item"><a href="index.html#about" class="nav__link">About me</a></li>
+                <li class="nav__item"><a href="index.html#work" class="nav__link">My Projects</a></li>
+                <li class="nav__item"><a href="https://app.luminpdf.com/viewer/60108aace582f200127115ac" class="nav__link">Resume</a></li>
+               </ul>
+            </nav>
+        </header>
+
+				<!-- portfolio items -->
+				<section class="intro" id="home">
+          <h1 class="section__title section__title--intro">
+              The classic <strong>to-do list</strong>
+          </h1>
+          <p class="section__subtitle section__subtitle--intro">to-do list made with react & react hooks</p>
+          <img class="intro__img" src="images/projectDemo.jpg" alt="coding laptop stock image">
+      	</section>
+				<div class="portfolio-item-individual">
+					<p>The classic to-do list was one of the earlier projects that I was able to work on and bring to life and it served two purposes: helping me to keep track of my day to day tasks, and allowing me to have fun and dive deeper with React and synthetic events. I wanted to add more functionality and features to my to-do list so I experimented with editing the tasks and being able to completely remove a task from the DOM if desired.</p>
+            <iframe src="https://giphy.com/embed/VE8pmHbOrwNjsWnKgZ" width="444" height="480" frameBorder="0" class="portfolio-item__display" allowFullScreen></iframe>
+					<p>Rather than having a plain design, I wanted to play around with the styling more to use vanilla CSS to give my to-do list more of an artistic flare. This allowed me to practice implementing pseudo-classes and linear gradients to have a varied color scheme for my task list.</p>
+            <iframe src="https://giphy.com/embed/ZozrV5vHNv0GIdOv18" width="444" height="480" frameBorder="0" class="portfolio-item__display" allowFullScreen></iframe>
+				</div>
+
+        <footer class="footer">
+          <a href="mailto:tshen815@live.com" class="footer__link">tshen815@live.com</a>
+          <ul class="social-list">
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/tonyShen815/">
+                  <i class="fab fa-linkedin fa-3x"></i>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/tshen815">
+                  <i class="fab fa-github fa-3x"></i>
+                </a>
+              </li>
+              <li class="social-list__item">
+                <a class="social-list__link" href="https://www.instagram.com/mellow_yellow815/">
+                  <i class="fab fa-instagram fa-3x"></i>
+                </a>
+              </li>
+          </ul>
+          <p class="copywrite">
+            <span class="copywrite__name">
+              <small>Tony Shen</small>
+            </span>
+            <span class="copywrite__date">
+              <small>© 2021</small>
+            </span>
+            <img class="hidden-leaf" src="images/konoha.png" alt="naruto hidden leaf symbol">
+        </p>
+      </footer>
+
+        <script src="index.js"></script>
+	</body>
+</html>
+<!-- <iframe src="https://giphy.com/embed/OI6NxEv1T7caXyiVN0" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/OI6NxEv1T7caXyiVN0">via GIPHY</a></p> -->
