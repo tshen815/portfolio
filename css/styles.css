@@ -42,7 +42,7 @@ body {
 }
 
 section {
-  padding: 4em 2em;
+  padding: 3.5em 2em;
 }
 
 img {
@@ -81,7 +81,8 @@ strong {
   transition: transform 200ms ease-in-out;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:active {
   transform: scale(1.2);
 }
 
@@ -176,7 +177,8 @@ header {
   text-decoration: none;
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link:active {
   /* color: var(--clr-accent); */
   opacity: 0.65;
   /* text-decoration: underline; */
@@ -202,15 +204,9 @@ header {
 .nav-open .nav {
   transform: translateX(70%);
 }
-
-@media (max-width: 660px) {
+@media (max-width: 950px) {
   .nav-open .nav {
     transform: translateX(60%);
-  }
-}
-@media (max-width: 420px) {
-  .nav-open .nav {
-    transform: translateX(45%);
   }
 }
 
@@ -332,6 +328,8 @@ header {
 
 .skills__flex-container {
   height: 50vh;
+  min-width: 50%;
+  overflow-y: auto;
   margin: 2em;
   display: grid;
   grid-template-columns: auto auto auto auto;
@@ -340,14 +338,7 @@ header {
 }
 @media (max-width: 610px) {
   .skills__flex-container {
-    height: 75vh;
-    grid-template-columns: auto auto;
-    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
-  }
-}
-@media (max-width: 380px) {
-  .skills__flex-container {
-    height: 90vh;
+    height: 80vh;
     grid-template-columns: auto auto;
     grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
   }
@@ -475,6 +466,7 @@ header {
 }
 
 .portfolio__img:hover,
+.portfolio__img:active,
 .portfolio__item:focus .portfolio__img {
   transform: scale(1.2);
   opacity: 0.5;
@@ -545,10 +537,11 @@ header {
 }
 
 .hidden-leaf {
-  width: 52px;
+  width: auto;
   height: auto;
   position: relative;
-  right: 4px;
+  left: 5px;
+  top: 6px;
   cursor: pointer;
 }
 
@@ -602,11 +595,6 @@ header {
     animation: naruto_run 2s ease 0s 1 normal none running;
   }
 }
-@media (max-width: 550px) {
-  .run {
-    animation: naruto_run 1s ease 0s 1 normal none running;
-  }
-}
 
 /* general media queries  */
 @media (min-width: 800px) {
@@ -615,5 +603,51 @@ header {
     --fs-h2: 3.75rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
+  }
+}
+
+/* media queries for super small devices  */
+@media only screen and (max-width: 599px) {
+  .run {
+    animation: naruto_run 2s ease 0s 1 normal none running;
+  }
+  .naruto {
+    margin-left: -120px;
+    top: 480px;
+    height: 100px;
+    width: auto;
+    z-index: 9;
+  }
+  .sasuke {
+    bottom: 0;
+    left: 0;
+    margin-left: -120px;
+    height: 100px;
+    width: auto;
+    z-index: 9;
+  }
+  iframe {
+    width: 100%;
+  }
+  .nav-open .nav {
+    transform: translateX(45%);
+  }
+  .skills__flex-container {
+    height: 95vh;
+    grid-template-columns: auto auto;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+  }
+  /* .intro > * {
+    margin: 0 auto !important;
+  }  */
+  .section__title--intro {
+    text-align: center;
+  }
+  .section__subtitle--intro {
+    display: flex;
+    justify-content: center;
+  }
+  .naruto__event {
+    margin: 0 auto;
   }
 }
